@@ -87,7 +87,7 @@ function Home() {
 
         {/* Main */}
         {widthWindow < 768 ? (
-          <div className="absolute md:mt-10">
+          <div id='home' className="absolute md:mt-10">
             {/* Navigation */}
             <div className="m-[20px]">
               <div className="float-left">
@@ -173,7 +173,7 @@ function Home() {
               </div>
             </div>
           </div>) : (
-          <div className="absolute mt-10">
+          <div id='home' className="absolute mt-10">
             {/* Navigation */}
             <NavBar />
             {/* First Page */}

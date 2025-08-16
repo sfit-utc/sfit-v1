@@ -8,29 +8,21 @@ import class6 from "../../assets/class/4_Classes_6.jpg"
 
 function Classes() {
   return (
-    <div id="training" className="bg-white w-screen h-fit overflow-x-hidden *:text-[#267452] my-20">
-      <h1
-        className="text-center tracking-normal
-                       font-[Inter] text-5xl font-bold
-                       "
-      >
-        ĐÀO TẠO
-      </h1>
-      <div className="mx-auto mt-2 bg-[#39906A] w-[525px] h-[4px]"></div>
+    <div id="training" className="bg-white w-screen h-fit overflow-x-hidden py-16">
+      <div className="container mx-auto px-4 max-w-6xl">
+        {/* Header Section */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#267452] font-[Inter] mb-4">
+            ĐÀO TẠO
+          </h1>
+          <div className="mx-auto bg-[#39906A] w-24 h-1 mb-6"></div>
+          <h2 className="text-xl md:text-2xl text-gray-700 font-[Crimson_Text] max-w-3xl mx-auto">
+            Tổ chức các lớp học chất lượng cao cho sinh viên
+          </h2>
+        </div>
 
-      <h2
-        className="xl:text-4xl md:text-3xl text-xl
-                   text-center tracking-normal my-8
-                   font-[Crimson_Text] "
-      >
-        Tổ chức các lớp học cho sinh viên
-      </h2>
-
-      <div className="w-screen h-fit mt-10 ">
-        <div
-          className="w-screen 
-                      flex flex-wrap gap-16 justify-center items-center px-2 "
-        >
+        {/* Classes Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
           {/* Items */}
           <ClassCard
             classInfor={{

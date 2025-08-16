@@ -3,28 +3,37 @@ import LeaderCard from "./LeaderCard";
 import Leader1 from "../../assets/leaders/6_Admin_1.jpg";
 import Leader2 from "../../assets/leaders/6_Admin_2.jpg";
 import Leader3 from "../../assets/leaders/6_Admin_3.jpg";
+import Leader4 from "../../assets/leaders/6_Admin_4.jpg";
+
+const chunhiem =   {
+    "name": "Hoàng Mạnh Khiêm",
+    "position": "Chủ nhiệm",
+    "image": Leader1,
+    "facebook": "https://www.facebook.com/hoangmanhkhiem.IT",
+    "email": "https://www.facebook.com/hoangmanhkhiem.IT"
+  }
 
 const leadersData = [
   {
-    "name": "Phạm Huy Hoàng",
-    "position": "Phó chủ nhiệm",
-    "image": Leader2,
-    "facebook": "https://www.facebook.com/hakatoma15",
-    "email": "https://www.facebook.com/hakatoma15"
-  },
-  {
-    "name": "Nguyễn Duy Mạnh",
-    "position": "Chủ nhiệm",
-    "image": Leader1,
-    "facebook": "https://www.facebook.com/manh.nguyenduy.37201901",
-    "email": "https://www.facebook.com/manh.nguyenduy.37201901"
-  },
-  {
-    "name": "Trịnh Thành Nam",
+    "name": "Nguyễn Văn Hoàng",
     "position": "Phó chủ nhiệm",
     "image": Leader3,
-    "facebook": "https://www.facebook.com/profile.php?id=61559188863257",
-    "email": "https://www.facebook.com/profile.php?id=61559188863257"
+    "facebook": "https://www.facebook.com/zunohoang",
+    "email": "https://www.facebook.com/zunohoang"
+  },
+    {
+    "name": "Phạm Thành An",
+    "position": "Phó chủ nhiệm",
+    "image": Leader2,
+    "facebook": "https://www.facebook.com/an.thanh.2403",
+    "email": "https://www.facebook.com/an.thanh.2403"
+  },
+  {
+    "name": "Nguyễn Công Thắng",
+    "position": "Phó chủ nhiệm",
+    "image": Leader4,
+    "facebook": "https://www.facebook.com/thangnguyen.0703",
+    "email": "https://www.facebook.com/thangnguyen.0703"
   }
 ]
 
@@ -93,6 +102,8 @@ function Leader() {
       </h1>
       <div className="mx-auto mt-2 bg-[#39906A] md:w-[525px] w-[200px] h-[4px] mb-8"></div>
 
+      <LeaderCard leader={chunhiem} />
+
       {widthWindow < 768 ? (
         <div className="m-[50px]">
           <div
@@ -120,8 +131,8 @@ function Leader() {
           {leadersData.map((leader, index) => (
             <div
               key={index}
-              className={`md:transform ${index === 1 ? "md:translate-y-0" : "md:translate-y-32"
-                } p-4`}
+              // className={`md:transform ${index === 1 ? "md:translate-y-0" : "md:translate-y-32"
+              //   } p-4`}
             >
               <LeaderCard leader={leader} />
             </div>
