@@ -4,7 +4,10 @@ import mail_icon from "../../assets/mail-svgrepo-com.svg";
 
 function Footer() {
   return (
-    <div className="bg-green-800 text-white flex flex-col items-center justify-center px-10">
+    <div
+      id="footer"
+      className="bg-green-800 text-white flex flex-col items-center justify-center px-10"
+    >
       <div className="lg:flex justify-between w-screen md:py-8 py-4 xl:px-44 lg:px-28 px-4">
         <div>
           <div className="font-bold md:text-6xl text-2xl">SFIT</div>
@@ -13,7 +16,7 @@ function Footer() {
           </div>
           <div className="mt-3 flex items-center gap-3">
             <a
-              href="https://www.facebook.com/sfit.utc"
+              href="https://www.facebook.com/sfit2016"
               target="_blank"
               rel="noopener noreferrer"
             >

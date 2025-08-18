@@ -19,8 +19,8 @@ function NavBar() {
                      before:bg-gradient-to-r before:from-[#03eb73] before:to-green-500
                      before:transition-all before:duration-300
                      hover:before:w-full"
-            to="home" 
-            duration={500} 
+            to="home"
+            duration={500}
             smooth={true}
           >
             Trang chủ
@@ -36,8 +36,8 @@ function NavBar() {
                      before:bg-gradient-to-r before:from-[#03eb73] before:to-green-500
                      before:transition-all before:duration-300
                      hover:before:w-full"
-            to="team" 
-            duration={500} 
+            to="team"
+            duration={500}
             smooth={true}
           >
             Các ban trực thuộc
@@ -53,8 +53,8 @@ function NavBar() {
                      before:bg-gradient-to-r before:from-[#03eb73] before:to-green-500
                      before:transition-all before:duration-300
                      hover:before:w-full"
-            to="activity" 
-            duration={500} 
+            to="activity"
+            duration={500}
             smooth={true}
           >
             Hoạt động
@@ -63,15 +63,15 @@ function NavBar() {
 
         <div className="group relative">
           <Link
-      className="relative text-[#03eb73] font-bold text-lg px-4 py-2 rounded-lg
+            className="relative text-[#03eb73] font-bold text-lg px-4 py-2 rounded-lg
                      transition-all duration-300 ease-in-out cursor-pointer
                      hover:text-green-500 hover:scale-105
                      before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 
                      before:bg-gradient-to-r before:from-[#03eb73] before:to-green-500
                      before:transition-all before:duration-300
                      hover:before:w-full"
-            to="training" 
-            duration={500} 
+            to="training"
+            duration={500}
             smooth={true}
           >
             Đào tạo
@@ -86,8 +86,8 @@ function NavBar() {
                      transition-all duration-300 ease-in-out cursor-pointer
                      hover:from-green-400 hover:to-green-600 hover:scale-105 hover:shadow-lg
                      shadow-cyan-500/25"
-            to="contact" 
-            duration={500} 
+            to="footer"
+            duration={500}
             smooth={true}
           >
             Liên hệ
