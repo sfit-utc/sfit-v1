@@ -1,3 +1,5 @@
+import clb from "../../assets/CLB.jpg";
+
 function Aim() {
   return (
     <div id="aim" className="relative bg-white w-screen overflow-x-hidden">
@@ -13,7 +15,7 @@ function Aim() {
         </h1>
         <div className="">
           <img
-            src="/src/assets/CLB.jpg"
+            src={clb}
             alt="CLB"
             className="w-[300px] md:w-[40rem] h-[150px] md:h-[20rem] object-cover"
           />
