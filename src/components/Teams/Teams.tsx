@@ -1,4 +1,16 @@
 import TeamCard from "./TeamCard/TeamCard";
+import banchunhiem from "../../assets/teams/BAN_CHU_NHIEM.jpg";
+import bancansu from "../../assets/teams/BAN_CAN_SU.jpg";
+import banchuyenmon from "../../assets/teams/BAN_CHUYEN_MON.jpg";
+import banhoctap from "../../assets/teams/BAN_HOC_TAP.jpg";
+import banweb from "../../assets/teams/BAN_WEB.jpg";
+import bangame from "../../assets/teams/BAN_GAME.jpg";
+import banai from "../../assets/teams/BAN_AI.jpg";
+import banktmt from "../../assets/teams/BAN_KY_THUAT_MAY_TINH.jpg";
+import baniot from "../../assets/teams/BAN_IOT.jpg";
+import bantruyenthong from "../../assets/teams/BAN_TRUYEN_THONG.jpg";
+import banhaucan from "../../assets/teams/BAN_HAU_CAN.jpg";
+import bandoingoai from "../../assets/teams/BAN_DOI_NGOAI.jpg";
 import { useState } from "react";
 
 const teams = [
@@ -7,7 +19,7 @@ const teams = [
     activate:
       "Đảm bảo hoạt động của CLB diễn ra suôn sẻ, quản lý các ban trực thuộc và định hướng phát triển của CLB.",
     leader: "Hoàng Mạnh Khiêm",
-    image: "/src/assets/teams/BAN_CHU_NHIEM.jpg",
+    image: banchunhiem,
     icon: "/src/assets/teams/BAN_CHU_NHIEM_ICON.svg",
   },
   {
@@ -15,7 +27,7 @@ const teams = [
     activate:
       "Chịu trách nhiệm quản lý các hoạt động hàng ngày của CLB, hỗ trợ Ban Chủ nhiệm trong việc điều hành và tổ chức các sự kiện.",
     leader: "Hoàng Mạnh Khiêm",
-    image: "/src/assets/teams/BAN_CAN_SU.jpg",
+    image: bancansu,
     icon: "/src/assets/teams/BAN_CAN_SU_ICON.svg",
   },
   {
@@ -23,7 +35,7 @@ const teams = [
     activate:
       "Bao gồm các sinh viên năm 2 trở lên có thành tích học tập xuất sắc, có nhiệm vụ tổ chức các lớp học và chia sẻ kiến thức chuyên môn đến các thành viên CLB.",
     leader: "Nguyễn Đức Mạnh",
-    image: "/src/assets/teams/BAN_CHUYEN_MON.jpg",
+    image: banchuyenmon,
     icon: "/src/assets/teams/BAN_CHUYEN_MON_ICON.svg",
   },
   {
@@ -31,7 +43,7 @@ const teams = [
     activate:
       "Sẽ được tham gia vào các lớp học do CLB tổ chức và ban chuyên môn trực tiếp giảng dạy, đồng thời có nhiệm vụ tham gia hỗ trợ tích cực các hoạt động do CLB tổ chức.",
     leader: "Nguyễn Việt Hoàng",
-    image: "/src/assets/teams/BAN_HOC_TAP.jpg",
+    image: banhoctap,
     icon: "/src/assets/teams/BAN_HOC_TAP_ICON.svg",
   },
 
@@ -40,7 +52,7 @@ const teams = [
     activate:
       "Phát triển và duy trì các dự án liên quan đến lập trình web, giảng dạy các công nghệ và kỹ thuật liên quan.",
     leader: "Mai Thành Đạt",
-    image: "/src/assets/teams/BAN_WEB.jpg",
+    image: banweb,
     icon: "/src/assets/teams/BAN_WEB_ICON.svg",
   },
   {
@@ -48,7 +60,7 @@ const teams = [
     activate:
       "Tạo môi trường học tập và làm việc cho những bạn muốn theo hướng phát triển game (programmer, artist, designer). Thường tổ chức chia đội để tham gia những sự kiện GameJam (GameJam VietNam, GMTK GameJam)",
     leader: "Trịnh Thành Nam",
-    image: "/src/assets/teams/BAN_GAME.jpg",
+    image: bangame,
     icon: "/src/assets/teams/BAN_GAME_ICON.svg",
   },
   {
@@ -56,7 +68,7 @@ const teams = [
     activate:
       "Nghiên cứu và phát triển các ứng dụng trí tuệ nhân tạo, chia sẻ kiến thức về machine learning và deep learning.",
     leader: "Lương Tiến Dũng",
-    image: "/src/assets/teams/BAN_AI.jpg",
+    image: banai,
     icon: "/src/assets/teams/BAN_AI_ICON.svg",
   },
   {
@@ -64,7 +76,7 @@ const teams = [
     activate:
       "Giải quyết các vấn đề liên quan đến phần cứng và kỹ thuật máy tính, tổ chức các buổi thực hành về lắp ráp và sửa chữa máy tính.",
     leader: "Bùi Xuân Sơn",
-    image: "/src/assets/teams/BAN_KY_THUAT_MAY_TINH.jpg",
+    image: banktmt,
     icon: "/src/assets/teams/BAN_KY_THUAT_MAY_TINH_ICON.svg",
   },
   {
@@ -72,7 +84,7 @@ const teams = [
     activate:
       "Nghiên cứu và phát triển các dự án về Internet of Things, giảng dạy và chia sẻ kiến thức về các thiết bị kết nối. Tham gia các cuộc thi cấp trường, ngoài trường.",
     leader: "Nguyễn Quốc Khánh",
-    image: "/src/assets/teams/BAN_IOT.jpg",
+    image: baniot,
     icon: "/src/assets/teams/BAN_IOT_ICON.svg",
   },
   {
@@ -80,7 +92,7 @@ const teams = [
     activate:
       "Xây dựng và phát triển hình ảnh của CLB, quản lý các kênh truyền thông xã hội và tổ chức các chiến dịch quảng bá.",
     leader: "Trần Quang Huy",
-    image: "/src/assets/teams/BAN_TRUYEN_THONG.jpg",
+    image: bantruyenthong,
     icon: "/src/assets/teams/BAN_TRUYEN_THONG_ICON.svg",
   },
   {
@@ -88,7 +100,7 @@ const teams = [
     activate:
       "Đảm bảo các hoạt động và sự kiện của CLB diễn ra suôn sẻ, quản lý các công việc hậu cần và chuẩn bị cơ sở vật chất.",
     leader: "Nguyễn Thùy Linh",
-    image: "/src/assets/teams/BAN_HAU_CAN.jpg",
+    image: banhaucan,
     icon: "/src/assets/teams/BAN_HAU_CAN_ICON.svg",
   },
   {
@@ -96,7 +108,7 @@ const teams = [
     activate:
       "Chịu trách nhiệm thiết lập và duy trì mối quan hệ với các doanh nghiệp và các câu lạc bộ khác, tổ chức sự kiện, đồng thời tìm kiếm cơ hội hợp tác và tài trợ cho câu lạc bộ.",
     leader: "Trịnh Công Đức",
-    image: "/src/assets/teams/BAN_DOI_NGOAI.jpg",
+    image: bandoingoai,
     icon: "/src/assets/teams/BAN_DOI_NGOAI_ICON.svg",
   },
 ];
