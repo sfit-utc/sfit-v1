@@ -8,8 +8,6 @@ function Home() {
   const [widthWindow, setWidthWindow] = useState(window.innerWidth);
   const [isModalOpen, setIsModalOpen] = useState(false); // State quản lý modal
 
-
-
   useEffect(() => {
     const handleResize = () => setWidthWindow(window.innerWidth);
     window.addEventListener("resize", handleResize);
@@ -22,13 +20,16 @@ function Home() {
   };
 
   const handleVideo = () => {
-    window.open("https://www.facebook.com/watch/?mibextid=UalRPS&v=1038642307267589&rdid=VPR7mRUpAYq98Og6", "_blank");
-  }
+    window.open(
+      "https://www.facebook.com/watch/?mibextid=UalRPS&v=1038642307267589&rdid=VPR7mRUpAYq98Og6",
+      "_blank"
+    );
+  };
 
   const handleDetail = () => {
     // go to link
     window.open("https://www.facebook.com/sfit.utc", "_blank");
-  }
+  };
 
   return (
     // Home
@@ -39,29 +40,46 @@ function Home() {
           className="fixed inset-0 z-50 bg-black bg-opacity-80 flex justify-center items-center"
           onClick={handleModel}
         >
-          <div
-            className="relative w-full h-full flex flex-col items-center justify-center text-white"
-
-          >
+          <div className="relative w-full h-full flex flex-col items-center justify-center text-white">
             <nav className="w-full h-full flex flex-col justify-center items-center text-center">
               <ul className="text-3xl">
                 <li className="py-4">
-                  <Link to="home" onClick={handleModel} duration={500} smooth={true}>
+                  <Link
+                    to="home"
+                    onClick={handleModel}
+                    duration={500}
+                    smooth={true}
+                  >
                     Trang chủ
                   </Link>
                 </li>
                 <li className="py-4">
-                  <Link to="team" onClick={handleModel} duration={500} smooth={true}>
+                  <Link
+                    to="team"
+                    onClick={handleModel}
+                    duration={500}
+                    smooth={true}
+                  >
                     Các ban trực thuộc
                   </Link>
                 </li>
                 <li className="py-4">
-                  <Link to="activity" onClick={handleModel} duration={500} smooth={true}>
+                  <Link
+                    to="activity"
+                    onClick={handleModel}
+                    duration={500}
+                    smooth={true}
+                  >
                     Hoạt động
                   </Link>
                 </li>
                 <li className="py-4">
-                  <Link to="training" onClick={handleModel} duration={500} smooth={true}>
+                  <Link
+                    to="training"
+                    onClick={handleModel}
+                    duration={500}
+                    smooth={true}
+                  >
                     Đào tạo
                   </Link>
                 </li>
@@ -82,12 +100,12 @@ function Home() {
                         absolute w-screen h-screen 
                         flex items-center justify-center shrink-0
                         overflow-x-hidden  
-                        bg-cover bg-no-repeat bg-[url(./assets/CLB.jpg)] blur-sm "
+                        bg-cover bg-no-repeat bg-[url(./assets/CLB-v2.jpg)] blur-sm "
         ></div>
 
         {/* Main */}
         {widthWindow < 768 ? (
-          <div id='home' className="absolute md:mt-10">
+          <div id="home" className="absolute md:mt-10">
             {/* Navigation */}
             <div className="m-[20px]">
               <div className="float-left">
@@ -100,11 +118,34 @@ function Home() {
                   SFIT
                 </span>
               </div>
-              <div className="float-right text-blue-100 ml-[10px]" onClick={handleModel}>
-                <svg width="24" height="24" fill="none" aria-hidden="true"><path d="M12 6v.01M12 12v.01M12 18v.01M12 7a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm0 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm0 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+              <div
+                className="float-right text-blue-100 ml-[10px]"
+                onClick={handleModel}
+              >
+                <svg width="24" height="24" fill="none" aria-hidden="true">
+                  <path
+                    d="M12 6v.01M12 12v.01M12 18v.01M12 7a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm0 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm0 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
               </div>
               <div className="float-right text-blue-100">
-                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m19 19-3.5-3.5"></path><circle cx="11" cy="11" r="6"></circle></svg>
+                <svg
+                  width="24"
+                  height="24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m19 19-3.5-3.5"></path>
+                  <circle cx="11" cy="11" r="6"></circle>
+                </svg>
               </div>
             </div>
             {/* First Page */}
@@ -115,9 +156,7 @@ function Home() {
                   <span>
                     <img src={Logo} alt="Logo" className="rounded-full" />
                   </span>
-                  <span
-                    className="w-fit text-4xl xl:text-5xl font-bold text-white mt-[20px]"
-                  >
+                  <span className="w-fit text-4xl xl:text-5xl font-bold text-white mt-[20px]">
                     UTC'S IT CLUB
                   </span>
                 </div>
@@ -172,8 +211,9 @@ function Home() {
                 <Slider />
               </div>
             </div>
-          </div>) : (
-          <div id='home' className="absolute mt-10">
+          </div>
+        ) : (
+          <div id="home" className="absolute mt-10">
             {/* Navigation */}
             <NavBar />
             {/* First Page */}
@@ -194,7 +234,8 @@ function Home() {
                 >
                   UTC'S IT CLUB
                 </span>
-                <div onClick={handleVideo}
+                <div
+                  onClick={handleVideo}
                   className="w-fit 
                               flex items-center justify-center my-2
                               xl:my-6"
@@ -225,7 +266,8 @@ function Home() {
                     Xem video
                   </span>
                 </div>
-                <button onClick={handleDetail}
+                <button
+                  onClick={handleDetail}
                   type="button"
                   className="w-48 h-16
                                             bg-[#D9D9D9] rounded-[36px]
