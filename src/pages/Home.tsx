@@ -28,7 +28,7 @@ function Home() {
 
   const handleDetail = () => {
     // go to link
-    window.open("https://www.facebook.com/sfit.utc", "_blank");
+    window.open("https://www.facebook.com/sfit2016", "_blank");
   };
 
   return (
@@ -220,18 +220,21 @@ function Home() {
             <div className="w-screen h-[80vh] px-24 flex flex-col lg:flex-row justify-between items-center">
               {/* Information */}
               <div className="flex flex-col w-fit">
-                <span
+                {/* <span
                   className="w-fit h-fit text-[140px]
               xl:text-[11.625rem] text-transparent leading-[100%] font-bold font-['Jost']
               drop-shadow-[4px_4px_4px_rgba(0,0,0,0.25)]
               bg-[linear-gradient(111deg,_#DEFFEE_10%,_#0FA858_72%,_#194C35_87%)] bg-clip-text "
                 >
                   SFIT
-                </span>
-                <span
-                  className="w-fit 
-                              text-4xl xl:text-5xl font-bold text-white"
-                >
+                </span> */}
+                <img
+                  src="/logo-sfitweb.png"
+                  width={300}
+                  height={300}
+                  alt="sfit"
+                />
+                <span className="w-fit mt-4 text-4xl xl:text-5xl font-bold text-white">
                   UTC'S IT CLUB
                 </span>
                 <div

@@ -2,7 +2,7 @@ import TeamCard from "./TeamCard/TeamCard";
 import banchunhiem from "../../assets/teams/BAN_CHU_NHIEM.jpg";
 import bancansu from "../../assets/teams/BAN_CAN_SU.jpg";
 import banchuyenmon from "../../assets/teams/BAN_CHUYEN_MON.jpg";
-import banhoctap from "../../assets/teams/BAN_HOC_TAP.jpg";
+import banhoctap from "../../assets/class/4_Classes_4.jpg";
 import banweb from "../../assets/teams/BAN_WEB.jpg";
 import bangame from "../../assets/teams/BAN_GAME.jpg";
 import banai from "../../assets/teams/BAN_AI.jpg";

@@ -1,31 +1,88 @@
-import clb from "../../assets/CLB.jpg";
+import Stack from "./Stack";
+import stack_01 from "../../assets/stack_01.jpg";
+import stack_02 from "../../assets/CLB-v2.jpg";
+import stack_03 from "../../assets/CLB.jpg";
+import stack_04 from "../../assets/stack_04.jpg";
+import { useState, useEffect } from "react";
+
+const images = [
+  {
+    id: 1,
+    img: stack_01,
+  },
+  {
+    id: 2,
+    img: stack_02,
+  },
+  {
+    id: 3,
+    img: stack_03,
+  },
+  {
+    id: 4,
+    img: stack_04,
+  },
+];
 
 function Aim() {
+  const [dimensions, setDimensions] = useState({ width: 350, height: 175 });
+
+  useEffect(() => {
+    const updateDimensions = () => {
+      const width = window.innerWidth;
+      if (width >= 1024) {
+        setDimensions({ width: 720, height: 360 });
+      } else if (width >= 768) {
+        setDimensions({ width: 580, height: 290 });
+      } else if (width >= 640) {
+        setDimensions({ width: 500, height: 250 });
+      } else if (width >= 480) {
+        setDimensions({ width: 400, height: 200 });
+      } else {
+        setDimensions({
+          width: Math.min(350, width - 40),
+          height: Math.min(175, (width - 40) / 2),
+        });
+      }
+    };
+
+    updateDimensions();
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
+
   return (
-    <div id="aim" className="relative bg-white w-screen overflow-x-hidden">
+    <div
+      id="aim"
+      className="relative bg-white w-full min-h-screen overflow-x-hidden"
+    >
       {/* Header */}
-      <div
-        className="flex justify-center items-center flex-col      
-                            [&>div]:shadow-[0px_4px_27px_0px_#0F3122] 
-                            [&>div]:bg-cover [&>div]:bg-no-repeat [&>div]:bg-center
-                            *:font-[playfair-display]"
-      >
-        <h1 className=" md:mx-24 mt-8 md:mt-24 mb-6 md:mb-12 italic md:text-[2.125rem] font-bold text-[#194C35] tracking-[1.36px]">
+      <div className="flex justify-center items-center flex-col py-4 sm:py-8 md:py-12">
+        <h1 className="mx-2 sm:mx-4 md:mx-24 mt-4 sm:mt-8 md:mt-24 mb-4 sm:mb-6 md:mb-12 italic text-lg sm:text-xl md:text-[2.125rem] font-bold text-[#194C35] tracking-[1.36px] text-center">
           "Đoàn kết - Sáng tạo - Phát triển"
         </h1>
-        <div className="">
+        <div className="w-full flex justify-center px-2 sm:px-4">
+          <Stack
+            randomRotation={true}
+            sensitivity={180}
+            sendToBackOnClick={false}
+            cardDimensions={dimensions}
+            cardsData={images}
+          />
+        </div>
+        {/* <div className="">
           <img
             src={clb}
             alt="CLB"
             className="w-[300px] md:w-[40rem] h-[150px] md:h-[20rem] object-cover"
           />
-        </div>
+        </div> */}
       </div>
       {/* Para */}
       <div
-        className="*:font-[playfair-display] 
-                          mx-2 md:mx-10 xl:mx-40 [&>p]:text-center [&>p]:tracking-wider text-sm md:text-xl [&>p]:font-medium  [&>p]:text-black
-                            mt-14 [&>p]:w-fit"
+        className="*:font-[montserrat] 
+                          mx-4 sm:mx-6 md:mx-10 xl:mx-40 [&>p]:text-center [&>p]:tracking-wider text-sm sm:text-base md:text-lg lg:text-2xl [&>p]:font-semibold [&>p]:text-green-900
+                            mt-8 md:mt-14 [&>p]:w-fit [&>p]:leading-relaxed"
       >
         <p className="">
           SFIT được thành lập vào năm 2016 - là CLB trực thuộc và lớn mạnh của
@@ -43,13 +100,14 @@ function Aim() {
       </div>
 
       {/* Circle */}
-      <div className="hidden xl:block absolute top-10 left-10">
+      <div className="hidden lg:block absolute top-10 left-4 xl:left-10">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="230"
-          height="171"
+          width="180"
+          height="140"
           viewBox="0 0 230 171"
           fill="none"
+          className="xl:w-[230px] xl:h-[171px]"
         >
           <g filter="url(#filter0_d_81_1651)">
             <circle cx="135.5" cy="121.5" r="41.5" fill="#DCAF58" />
@@ -207,13 +265,14 @@ function Aim() {
           </defs>
         </svg>
       </div>
-      <div className="hidden xl:block absolute top-1/2 right-10">
+      <div className="hidden lg:block absolute top-1/2 right-4 xl:right-10">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="177"
-          height="171"
+          width="140"
+          height="140"
           viewBox="0 0 177 171"
           fill="none"
+          className="xl:w-[177px] xl:h-[171px]"
         >
           <g filter="url(#filter0_d_81_1647)">
             <circle cx="45.5" cy="41.5" r="41.5" fill="#267452" />
