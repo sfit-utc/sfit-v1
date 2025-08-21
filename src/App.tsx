@@ -1,9 +1,12 @@
-
+import { Analytics } from "@vercel/analytics/react";
 import LandingPage from "./pages/LandingPage";
 
 function App() {
   return (
-    <LandingPage />
+    <div>
+      <LandingPage />
+      <Analytics />
+    </div>
   );
 }
 
